@@ -1,4 +1,4 @@
-@keyframes slide-to-left {
+/* @keyframes slide-to-left {
   from {
     left: 0%;
   }
@@ -14,10 +14,10 @@
   to {
     left: 0%;
   }
-}
+} */
 
 
-::view-transition-old(root) {
+/* ::view-transition-old(root) {
   animation-duration: 0.3s;
   animation-name: slide-to-left;
 }
@@ -25,4 +25,4 @@
 ::view-transition-new(root) {
   animation-duration: 0.3s;
   animation-name: slide-from-right;
-}
+} */

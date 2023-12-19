@@ -24,6 +24,8 @@ export const TaskDetail: FC = () => {
               width: 200,
               height: 200,
               objectFit: "cover",
+              viewTransitionName: `image-${task.id}`,
+              contain: "paint",
             }}
           />
         </>

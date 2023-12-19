@@ -20,6 +20,8 @@ export const TaskItem: FC<Props> = ({ task }) => {
             width: 200,
             height: 200,
             objectFit: "cover",
+            viewTransitionName: `image-${task.id}`,
+            contain: "paint",
           }}
         />
       </NavLink>
