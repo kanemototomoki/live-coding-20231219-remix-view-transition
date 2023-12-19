@@ -1,11 +1,28 @@
 import { FC } from "react";
+import { Task } from "../../type";
+import { Image } from "antd";
+import { NavLink } from "@remix-run/react";
 
-type Props = {};
+type Props = {
+  task: Task;
+};
 
-export const TaskItem: FC<Props> = () => {
+export const TaskItem: FC<Props> = ({ task }) => {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>TaskItem</h1>
+    <div>
+      <NavLink to={`/tasks/${task.id}`}>
+        <h1>{task.title}</h1>
+        <p>{task.id}</p>
+        <Image
+          width={200}
+          src={task.thumbnailUrl}
+          style={{
+            width: 200,
+            height: 200,
+            objectFit: "cover",
+          }}
+        />
+      </NavLink>
     </div>
   );
 };

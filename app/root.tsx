@@ -10,6 +10,7 @@ import {
 } from "@remix-run/react";
 
 import "antd/dist/reset.css";
+import { TaskProvider } from "./feature/tasks/TaskProvider";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -28,13 +29,15 @@ export default function App() {
         style={{
           backgroundColor: "#e5e5e5",
           height: "100vh",
-          padding: '2rem'
+          padding: "2rem",
         }}
       >
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+        <TaskProvider>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </TaskProvider>
       </body>
     </html>
   );
