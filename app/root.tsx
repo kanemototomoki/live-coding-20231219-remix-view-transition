@@ -10,6 +10,7 @@ import {
 } from "@remix-run/react";
 
 import "antd/dist/reset.css";
+import "../public/globals.css";
 import { TaskProvider } from "./feature/tasks/TaskProvider";
 
 export const links: LinksFunction = () => [
@@ -22,6 +23,7 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="view-transition" content="same-origin" />
         <Meta />
         <Links />
       </head>

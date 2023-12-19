@@ -10,7 +10,7 @@ type Props = {
 export const TaskItem: FC<Props> = ({ task }) => {
   return (
     <div>
-      <NavLink to={`/tasks/${task.id}`}>
+      <NavLink to={`/tasks/${task.id}`} unstable_viewTransition>
         <h1>{task.title}</h1>
         <p>{task.id}</p>
         <Image
